@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QSizePolicy, QApplication
-from PyQt5 import QtWebEngineWidgets
+from PyQt5 import QtWebEngineWidgets, QtGui
 from PyQt5.QtCore import QUrl
 import const
 
@@ -7,6 +7,7 @@ class MainWindow(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Whatsie")
+        self.setWindowIcon(QtGui.QIcon("../assets/logo.png"))
         self.resize(800, 701)
         self.root = QVBoxLayout()
         self.root.setContentsMargins(0,0,0,0)
